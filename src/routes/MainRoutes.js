@@ -10,6 +10,10 @@ const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')))
 // sample page routing
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
+//
+const UsagePage = Loadable(lazy(() => import('views/usage/UsagePage')));
+const UsersPage = Loadable(lazy(() => import('views/users/UsersPage')));
+
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -34,7 +38,7 @@ const MainRoutes = {
         },
         {
             path: '/users',
-            element: <SamplePage />
+            element: <UsersPage />
         },
         {
             path: '/account',
@@ -46,7 +50,7 @@ const MainRoutes = {
         },
         {
             path: '/usage',
-            element: <SamplePage />
+            element: <UsagePage />
         },
         {
             path: '/apikeys',
