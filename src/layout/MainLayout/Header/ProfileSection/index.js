@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useCustomization } from 'context/CustomizationContext';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -43,7 +43,7 @@ import { IconLogout, IconSearch, IconSettings, IconUser } from '@tabler/icons';
 
 const ProfileSection = () => {
     const theme = useTheme();
-    const customization = useSelector((state) => state.customization);
+    const { state: customization, dispatch } = useCustomization(); // Use context here
     const navigate = useNavigate();
 
     const [sdm, setSdm] = useState(true);

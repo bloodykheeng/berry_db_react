@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import { forwardRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useCustomization } from 'context/CustomizationContext';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import { Avatar, Chip, ListItemButton, ListItemIcon, ListItemText, Typography, useMediaQuery } from '@mui/material';
 
 // project imports
-import { MENU_OPEN, SET_MENU } from 'store/actions';
+import { MENU_OPEN, SET_MENU } from 'context/actions';
 import config from 'config';
 
 // assets
@@ -18,8 +18,7 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 const NavItem = ({ item, level }) => {
     const theme = useTheme();
-    const dispatch = useDispatch();
-    const customization = useSelector((state) => state.customization);
+    const { state: customization, dispatch } = useCustomization(); // Use context here
     const matchesSM = useMediaQuery(theme.breakpoints.down('lg'));
 
     const Icon = item.icon;

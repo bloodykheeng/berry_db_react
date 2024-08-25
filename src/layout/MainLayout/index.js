@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useCustomization } from 'context/CustomizationContext';
 import { Outlet } from 'react-router-dom';
 
 // material-ui
@@ -12,8 +12,8 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import Customization from '../Customization';
 import navigation from 'menu-items';
-import { drawerWidth } from 'store/constant';
-import { SET_MENU } from 'store/actions';
+import { drawerWidth } from 'context/constant';
+import { SET_MENU } from 'context/actions';
 
 // assets
 import { IconChevronRight } from '@tabler/icons';
@@ -69,8 +69,8 @@ const MainLayout = () => {
     const matchDownMd = useMediaQuery(theme.breakpoints.down('lg'));
 
     // Handle left drawer
-    const leftDrawerOpened = useSelector((state) => state.customization.opened);
-    const dispatch = useDispatch();
+    const { state: customization, dispatch } = useCustomization(); // Use context here
+    const leftDrawerOpened = customization.opened;
     const handleLeftDrawerToggle = () => {
         dispatch({ type: SET_MENU, opened: !leftDrawerOpened });
     };

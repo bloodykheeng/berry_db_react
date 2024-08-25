@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useCustomization } from 'context/CustomizationContext';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -13,7 +13,7 @@ import Chart from 'react-apexcharts';
 // project imports
 import SkeletonTotalGrowthBarChart from 'ui-component/cards/Skeleton/TotalGrowthBarChart';
 import MainCard from 'ui-component/cards/MainCard';
-import { gridSpacing } from 'store/constant';
+import { gridSpacing } from 'context/constant';
 
 // chart data
 import chartData from './chart-data/total-growth-bar-chart';
@@ -38,7 +38,7 @@ const status = [
 const TotalGrowthBarChart = ({ isLoading }) => {
     const [value, setValue] = useState('today');
     const theme = useTheme();
-    const customization = useSelector((state) => state.customization);
+    const { state: customization } = useCustomization();
 
     const { navType } = customization;
     const { primary } = theme.palette.text;

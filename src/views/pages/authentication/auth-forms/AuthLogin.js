@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useCustomization } from 'context/CustomizationContext';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -41,7 +41,7 @@ const FirebaseLogin = ({ ...others }) => {
     const theme = useTheme();
     const scriptedRef = useScriptRef();
     const matchDownSM = useMediaQuery(theme.breakpoints.down('md'));
-    const customization = useSelector((state) => state.customization);
+    const { state: customization } = useCustomization();
     const [checked, setChecked] = useState(true);
 
     const googleHandler = async () => {

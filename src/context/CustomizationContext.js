@@ -1,19 +1,18 @@
-// project imports
+// store/CustomizationContext.js
+import React, { createContext, useReducer, useContext } from 'react';
 import config from 'config';
-
-// action - state management
 import * as actionTypes from './actions';
 
-export const initialState = {
+// Initial state
+const initialState = {
     isOpen: [], // for active default menu
     fontFamily: config.fontFamily,
     borderRadius: config.borderRadius,
     opened: true
 };
 
-// ==============================|| CUSTOMIZATION REDUCER ||============================== //
-
-const customizationReducer = (state = initialState, action) => {
+// Reducer function
+const customizationReducer = (state, action) => {
     let id;
     switch (action.type) {
         case actionTypes.MENU_OPEN:
@@ -42,4 +41,21 @@ const customizationReducer = (state = initialState, action) => {
     }
 };
 
-export default customizationReducer;
+// Create Context
+const CustomizationContext = createContext();
+
+// Provider component
+export const CustomizationProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(customizationReducer, initialState);
+
+    return <CustomizationContext.Provider value={{ state, dispatch }}>{children}</CustomizationContext.Provider>;
+};
+
+// Custom hooks to use context
+export const useCustomization = () => {
+    const context = useContext(CustomizationContext);
+    if (!context) {
+        throw new Error('useCustomization must be used within a CustomizationProvider');
+    }
+    return context;
+};

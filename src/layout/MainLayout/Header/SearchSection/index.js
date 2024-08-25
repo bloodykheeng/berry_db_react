@@ -107,11 +107,11 @@ const MobileSearch = ({ value, setValue, popupState }) => {
     );
 };
 
-MobileSearch.propTypes = {
-    value: PropTypes.string,
-    setValue: PropTypes.func,
-    popupState: PopupState
-};
+// MobileSearch.propTypes = {
+//     value: PropTypes.string,
+//     setValue: PropTypes.func,
+//     popupState: PopupState
+// };
 
 // ==============================|| SEARCH INPUT ||============================== //
 
