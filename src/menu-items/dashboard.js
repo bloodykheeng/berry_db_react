@@ -1,22 +1,34 @@
 // assets
-import { IconDashboard } from '@tabler/icons';
-
 import {
-    Home as HomeIcon,
-    People as UsersIcon,
-    AccountCircle as AccountIcon,
-    Receipt as BillingIcon,
-    BarChart as UsageIcon,
-    VpnKey as APIKeysIcon,
-    IntegrationInstructions as IntegrationsIcon,
-    Description as ContentIcon,
-    SmartToy as BotsIcon,
-    Chat as ChatIcon,
-    Search as SearchIcon
-} from '@mui/icons-material';
+    IconDashboard,
+    IconHome,
+    IconUsers,
+    IconUserCircle,
+    IconReceipt,
+    IconChartBar,
+    IconKey,
+    IconPlug,
+    IconFileText,
+    IconRobot,
+    IconMessageCircle,
+    IconSearch
+} from '@tabler/icons-react';
 
 // constant
-const icons = { IconDashboard };
+const icons = {
+    IconDashboard,
+    IconHome,
+    IconUsers,
+    IconUserCircle,
+    IconReceipt,
+    IconChartBar,
+    IconKey,
+    IconPlug,
+    IconFileText,
+    IconRobot,
+    IconMessageCircle,
+    IconSearch
+};
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -37,7 +49,7 @@ const dashboard = {
             id: 'search',
             title: 'Search',
             type: 'item',
-            icon: SearchIcon,
+            icon: icons.IconSearch,
             url: '/search',
             breadcrumbs: false
         },
@@ -45,7 +57,7 @@ const dashboard = {
             id: 'home',
             title: 'Home',
             type: 'item',
-            icon: HomeIcon,
+            icon: icons.IconHome,
             url: '/home',
             breadcrumbs: false
         },
@@ -53,7 +65,7 @@ const dashboard = {
             id: 'users',
             title: 'Users',
             type: 'item',
-            icon: UsersIcon,
+            icon: icons.IconUsers,
             url: '/users',
             breadcrumbs: false
         },
@@ -61,7 +73,7 @@ const dashboard = {
             id: 'account',
             title: 'Account',
             type: 'item',
-            icon: AccountIcon,
+            icon: icons.IconUserCircle,
             url: '/account',
             breadcrumbs: false
         },
@@ -69,7 +81,7 @@ const dashboard = {
             id: 'billing',
             title: 'Billing',
             type: 'item',
-            icon: BillingIcon,
+            icon: icons.IconReceipt,
             url: '/billing',
             breadcrumbs: false
         },
@@ -77,7 +89,7 @@ const dashboard = {
             id: 'usage',
             title: 'Usage',
             type: 'item',
-            icon: UsageIcon,
+            icon: icons.IconChartBar,
             url: '/usage',
             breadcrumbs: false
         },
@@ -85,7 +97,7 @@ const dashboard = {
             id: 'apikeys',
             title: 'API Keys',
             type: 'item',
-            icon: APIKeysIcon,
+            icon: icons.IconKey,
             url: '/apikeys',
             breadcrumbs: false
         },
@@ -93,7 +105,7 @@ const dashboard = {
             id: 'integrations',
             title: 'Integrations',
             type: 'item',
-            icon: IntegrationsIcon,
+            icon: icons.IconPlug,
             url: '/integrations',
             breadcrumbs: false
         },
@@ -101,7 +113,7 @@ const dashboard = {
             id: 'content',
             title: 'Content',
             type: 'item',
-            icon: ContentIcon,
+            icon: icons.IconFileText,
             url: '/content',
             breadcrumbs: false
         },
@@ -109,7 +121,7 @@ const dashboard = {
             id: 'bots',
             title: 'Bots',
             type: 'item',
-            icon: BotsIcon,
+            icon: icons.IconRobot,
             url: '/bots',
             breadcrumbs: false
         },
@@ -117,7 +129,7 @@ const dashboard = {
             id: 'chat',
             title: 'Chat',
             type: 'item',
-            icon: ChatIcon,
+            icon: icons.IconMessageCircle,
             url: '/chat',
             breadcrumbs: false
         }
