@@ -4,15 +4,15 @@ import { lazy } from 'react';
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
 
-// dashboard routing
-const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
-
 // sample page routing
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
 //
+
+const DashboardPage = Loadable(lazy(() => import('views/dashboard/DashboardPage')));
 const UsagePage = Loadable(lazy(() => import('views/usage/UsagePage')));
 const UsersPage = Loadable(lazy(() => import('views/users/UsersPage')));
+const ChatPage = Loadable(lazy(() => import('views/chat/ChatPage')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -22,11 +22,11 @@ const MainRoutes = {
     children: [
         {
             path: '/',
-            element: <DashboardDefault />
+            element: <DashboardPage />
         },
         {
-            path: '/dashboard/default',
-            element: <DashboardDefault />
+            path: '/dashboard',
+            element: <DashboardPage />
         },
         {
             path: '/search',
@@ -70,7 +70,7 @@ const MainRoutes = {
         },
         {
             path: '/chat',
-            element: <SamplePage />
+            element: <ChatPage />
         },
         {
             path: '/sample-page',

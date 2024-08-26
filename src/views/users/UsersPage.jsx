@@ -1,8 +1,13 @@
 import React from 'react';
 import UsersList from './UsersList';
+import MainCard from 'ui-component/cards/MainCard';
 
 function UsersPage() {
-    return <UsersList />;
+    return (
+        <MainCard>
+            <UsersList />
+        </MainCard>
+    );
 }
 
 export default UsersPage;

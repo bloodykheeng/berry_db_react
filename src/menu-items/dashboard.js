@@ -41,32 +41,48 @@ const dashboard = {
             id: 'default',
             title: 'Dashboard',
             type: 'item',
-            url: '/dashboard/default',
+            url: '/dashboard',
             icon: icons.IconDashboard,
             breadcrumbs: false
         },
         {
-            id: 'search',
-            title: 'Search',
+            id: 'chat',
+            title: 'Chat',
             type: 'item',
-            icon: icons.IconSearch,
-            url: '/search',
+            icon: icons.IconMessageCircle,
+            url: '/chat',
             breadcrumbs: false
         },
-        {
-            id: 'home',
-            title: 'Home',
-            type: 'item',
-            icon: icons.IconHome,
-            url: '/home',
-            breadcrumbs: false
-        },
+        // {
+        //     id: 'search',
+        //     title: 'Search',
+        //     type: 'item',
+        //     icon: icons.IconSearch,
+        //     url: '/search',
+        //     breadcrumbs: false
+        // },
+        // {
+        //     id: 'home',
+        //     title: 'Home',
+        //     type: 'item',
+        //     icon: icons.IconHome,
+        //     url: '/home',
+        //     breadcrumbs: false
+        // },
         {
             id: 'users',
             title: 'Users',
             type: 'item',
             icon: icons.IconUsers,
             url: '/users',
+            breadcrumbs: false
+        },
+        {
+            id: 'usage',
+            title: 'Usage',
+            type: 'item',
+            icon: icons.IconChartBar,
+            url: '/usage',
             breadcrumbs: false
         },
         {
@@ -85,14 +101,7 @@ const dashboard = {
             url: '/billing',
             breadcrumbs: false
         },
-        {
-            id: 'usage',
-            title: 'Usage',
-            type: 'item',
-            icon: icons.IconChartBar,
-            url: '/usage',
-            breadcrumbs: false
-        },
+
         {
             id: 'apikeys',
             title: 'API Keys',
@@ -123,14 +132,6 @@ const dashboard = {
             type: 'item',
             icon: icons.IconRobot,
             url: '/bots',
-            breadcrumbs: false
-        },
-        {
-            id: 'chat',
-            title: 'Chat',
-            type: 'item',
-            icon: icons.IconMessageCircle,
-            url: '/chat',
             breadcrumbs: false
         }
     ]

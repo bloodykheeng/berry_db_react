@@ -8,17 +8,23 @@ import * as serviceWorker from 'serviceWorker';
 import App from 'App';
 import { CustomizationProvider } from 'context/CustomizationContext';
 
+//
+import 'index.css';
+import { StyledEngineProvider } from '@mui/material/styles';
+
 // style + assets
 import 'assets/scss/style.scss';
 
 // ==============================|| REACT DOM RENDER  ||============================== //
 
 ReactDOM.render(
-    <CustomizationProvider>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </CustomizationProvider>,
+    <BrowserRouter>
+        <CustomizationProvider>
+            <StyledEngineProvider injectFirst>
+                <App />
+            </StyledEngineProvider>
+        </CustomizationProvider>
+    </BrowserRouter>,
     document.getElementById('root')
 );
 
