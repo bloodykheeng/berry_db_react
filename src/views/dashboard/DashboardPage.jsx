@@ -158,7 +158,7 @@ function DashboardPage() {
                                     <tbody>
                                         <tr>
                                             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-left">
-                                                /argon/
+                                                /zane/
                                             </th>
                                             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                                                 4,569
@@ -173,7 +173,7 @@ function DashboardPage() {
                                         </tr>
                                         <tr>
                                             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-left">
-                                                /argon/index.html
+                                                /zane/index.html
                                             </th>
                                             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                                                 3,985
@@ -188,7 +188,7 @@ function DashboardPage() {
                                         </tr>
                                         <tr>
                                             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-left">
-                                                /argon/charts.html
+                                                /zane/charts.html
                                             </th>
                                             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                                                 3,513
@@ -203,7 +203,7 @@ function DashboardPage() {
                                         </tr>
                                         <tr>
                                             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-left">
-                                                /argon/tables.html
+                                                /zane/tables.html
                                             </th>
                                             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                                                 2,050
@@ -218,7 +218,7 @@ function DashboardPage() {
                                         </tr>
                                         <tr>
                                             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-left">
-                                                /argon/profile.html
+                                                /zane/profile.html
                                             </th>
                                             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                                                 1,795
